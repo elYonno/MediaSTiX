@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Overview">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabPremium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:clickable="true"
+        android:onClick="btnPremium_OnClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lblHeading"
+        app:srcCompat="@drawable/dollar" />
+
+    <ImageView
+        android:id="@+id/imgvwLowPlatform"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgvwWorstBanner"
+        app:layout_constraintEnd_toEndOf="@+id/imgvwWorstBanner"
+        app:layout_constraintStart_toEndOf="@+id/imgvwWorstBanner"
+        app:layout_constraintTop_toBottomOf="@+id/imgvwWorstBanner"
+        app:srcCompat="@drawable/youtube" />
+
+    <ImageView
+        android:id="@+id/imgvwLowScore"
+        android:layout_width="97dp"
+        android:layout_height="102dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgvwWorstBanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgvwWorstBanner"
+        app:layout_constraintTop_toTopOf="@+id/imgvwWorstBanner"
+        app:srcCompat="@drawable/lowscore" />
+
+    <TextView
+        android:id="@+id/lblTitleWorst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="Music"
+        app:layout_constraintStart_toEndOf="@+id/imgvwWorstBanner"
+        app:layout_constraintTop_toTopOf="@+id/imgvwWorstBanner" />
+
+    <TextView
+        android:id="@+id/lblBest2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Worst Post Today"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgvwHighPlatform" />
+
+    <TextView
+        android:id="@+id/lblHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Welcome"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnStats"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF0000"
+        android:onClick="btnStats_OnClick"
+        android:text="Statistics"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPosts"
+        app:layout_constraintEnd_toStartOf="@+id/btnAccounts"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnPosts" />
+
+    <Button
+        android:id="@+id/btnPosts"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#FF0000"
+        android:onClick="btnPosts_OnClick"
+        android:text="Posts"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnStats"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAccounts"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF0000"
+        android:onClick="btnAccounts_OnClick"
+        android:text="Accounts"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnStats"
+        app:layout_constraintTop_toTopOf="@+id/btnStats" />
+
+    <ImageView
+        android:id="@+id/imgvwHighBanner"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:onClick="imgHighBanner_OnClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblBest"
+        app:srcCompat="@drawable/blueplanet" />
+
+    <TextView
+        android:id="@+id/lblBest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Best Post Today"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblHeading" />
+
+    <TextView
+        android:id="@+id/lblTitleBest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="The Blue Planet"
+        app:layout_constraintStart_toEndOf="@+id/imgvwHighBanner"
+        app:layout_constraintTop_toTopOf="@+id/imgvwHighBanner" />
+
+    <ImageView
+        android:id="@+id/imgvwWorstBanner"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="imgLowBanner_OnClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblBest2"
+        app:srcCompat="@drawable/images" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:onClick="btnAdd_Onclick"
+        app:layout_constraintBottom_toTopOf="@+id/btnAccounts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ImageView
+        android:id="@+id/imgvwHighScore"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgvwHighBanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgvwHighBanner"
+        app:layout_constraintTop_toTopOf="@+id/imgvwHighBanner"
+        app:srcCompat="@drawable/highscore" />
+
+    <ImageView
+        android:id="@+id/imgvwHighPlatform"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgvwHighBanner"
+        app:layout_constraintEnd_toEndOf="@+id/imgvwHighBanner"
+        app:layout_constraintStart_toEndOf="@+id/imgvwHighBanner"
+        app:layout_constraintTop_toBottomOf="@+id/imgvwHighBanner"
+        app:layout_constraintVertical_bias="0.52"
+        app:srcCompat="@drawable/youtube" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

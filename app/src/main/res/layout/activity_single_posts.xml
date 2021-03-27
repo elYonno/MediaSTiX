@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SinglePosts">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSinglePin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="onButtonPin_Clicked"
+        app:backgroundTint="#2B2B2B"
+        app:layout_constraintStart_toStartOf="@+id/btnSingleEdit"
+        app:layout_constraintTop_toBottomOf="@+id/btnSingleDelete"
+        app:srcCompat="@android:drawable/btn_star_big_off" />
+
+    <ImageView
+        android:id="@+id/imgvwSingleScore2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSingleGo"
+        app:layout_constraintEnd_toStartOf="@+id/imgvwSingleScore"
+        app:srcCompat="@drawable/percentagehigh" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSingleDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        app:backgroundTint="#FF0000"
+        app:layout_constraintStart_toStartOf="@+id/btnSingleEdit"
+        app:layout_constraintTop_toBottomOf="@+id/btnSingleEdit"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <Button
+        android:id="@+id/btnSingleGo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FF0000"
+        android:text="Go to post"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSingleReturn" />
+
+    <ImageView
+        android:id="@+id/imgvwSingleScore"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSingleGo"
+        app:layout_constraintEnd_toEndOf="@+id/lblSingleCaption"
+        app:srcCompat="@drawable/highscore" />
+
+    <TextView
+        android:id="@+id/lblSingleDislikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Dislikes: 1,172"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="@+id/lblSinglePlatform"
+        app:layout_constraintTop_toBottomOf="@+id/lblSingleLikes" />
+
+    <TextView
+        android:id="@+id/lblSingleLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Likes: 1,124,120"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="@+id/lblSinglePlatform"
+        app:layout_constraintTop_toBottomOf="@+id/lblSingleViews" />
+
+    <ImageView
+        android:id="@+id/imgvwSingleBanner"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blueplanet" />
+
+    <TextView
+        android:id="@+id/lblSingleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="The Blue Planet"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgvwSingleBanner"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/imgvwSingleBanner"
+        app:layout_constraintTop_toBottomOf="@+id/imgvwSingleBanner" />
+
+    <TextView
+        android:id="@+id/lblSingleCaption"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Sir David Attenborough narrates this critically acclaimed series that dives deep into the marine environment of Planet Earth. Although two-thirds of the world's surface is covered with water, scientists know less about the oceans than they do about the surface of the moon. This limited series travels from various coasts to the poles to examine watery denizens ranging from the gigantic blue whale to microscopic coral polyps."
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblSingleTitle" />
+
+    <TextView
+        android:id="@+id/lblSinglePlatform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Platform: YouTube"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="@+id/lblSingleCaption"
+        app:layout_constraintTop_toBottomOf="@+id/lblSingleCaption" />
+
+    <TextView
+        android:id="@+id/lblSingleViews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Views: 14,124,153"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="@+id/lblSinglePlatform"
+        app:layout_constraintTop_toBottomOf="@+id/lblSinglePlatform" />
+
+    <Button
+        android:id="@+id/btnSingleReturn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FF0000"
+        android:onClick="onButtonReturn_Clicked"
+        android:text="Return"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSingleGo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSingleEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+</androidx.constraintlayout.widget.ConstraintLayout>

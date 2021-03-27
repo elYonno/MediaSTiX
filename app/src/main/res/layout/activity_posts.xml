@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Posts">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabUpload2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:onClick="btnAdd_Onclick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <Button
+        android:id="@+id/btnPostsReturn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#FF0000"
+        android:onClick="onButtonReturn_Clicked"
+        android:text="Return"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnPosts6"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPosts4"
+        app:srcCompat="@drawable/youtubetile6" />
+
+    <ImageButton
+        android:id="@+id/btnPosts5"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/btnPosts3"
+        app:layout_constraintTop_toBottomOf="@+id/btnPosts3"
+        app:srcCompat="@drawable/youtubetile5" />
+
+    <ImageButton
+        android:id="@+id/btnPosts4"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPosts2"
+        app:srcCompat="@drawable/youtubetile4" />
+
+    <ImageButton
+        android:id="@+id/btnPosts3"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButton"
+        app:layout_constraintTop_toBottomOf="@+id/btnPosts1"
+        app:srcCompat="@drawable/youtubetile3" />
+
+    <ImageButton
+        android:id="@+id/btnPosts2"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPostSort"
+        app:srcCompat="@drawable/youtubetile2" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="btnSearch_OnClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <TextView
+        android:id="@+id/lblPostsPlatform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Platform: YouTube"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+        app:layout_constraintTop_toTopOf="@+id/floatingActionButton" />
+
+    <TextView
+        android:id="@+id/lblPostSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sorted: Newest"
+        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton"
+        app:layout_constraintStart_toStartOf="@+id/lblPostsPlatform" />
+
+    <ImageButton
+        android:id="@+id/btnPosts1"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButton"
+        app:layout_constraintTop_toBottomOf="@+id/lblPostSort"
+        app:srcCompat="@drawable/youtubetile1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

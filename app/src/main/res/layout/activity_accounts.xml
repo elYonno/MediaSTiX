@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Accounts">
+
+    <Button
+        android:id="@+id/btnAddAccounts"
+        android:layout_width="150dp"
+        android:layout_height="47dp"
+        android:backgroundTint="#FF0000"
+        android:onClick="onBtnReturn_Clicked"
+        android:text="Add"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/btnReturnAccounts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnReturnAccounts" />
+
+    <ImageButton
+        android:id="@+id/imgbtnTikTok"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#FF0000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tiktok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtnInstagram" />
+
+    <ImageButton
+        android:id="@+id/imgbtnSnapchat"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#3F51B5"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/snapchat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtnTwitter" />
+
+    <ImageButton
+        android:id="@+id/imgbtnInstagram"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#FF0000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/instagram"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtnYouTube" />
+
+    <ImageButton
+        android:id="@+id/imgbtnTwitter"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#3F51B5"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="onTwitter_Clicked"
+        android:scaleType="fitCenter"
+        android:src="@drawable/twitter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtnFacebook" />
+
+    <ImageButton
+        android:id="@+id/imgbtnYouTube"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#FF0000"
+        android:onClick="onYouTube_Clicked"
+        android:scaleType="fitCenter"
+        android:src="@drawable/youtube"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnReturnAccounts"
+        android:layout_width="150dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#FF0000"
+        android:onClick="onBtnReturn_Clicked"
+        android:text="Return"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddAccounts"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imgbtnFacebook"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#3F51B5"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/facebook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

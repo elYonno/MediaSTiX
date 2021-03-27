@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".filter">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/lblSortBy2"
+        app:layout_constraintTop_toBottomOf="@+id/lblSortBy">
+
+        <RadioButton
+            android:id="@+id/btnFilterAscending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Ascending"
+            app:layout_constraintTop_toBottomOf="@+id/lblSortBy"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <RadioButton
+            android:id="@+id/btnFilterDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:checked="true"
+            android:text="Descending"
+            app:layout_constraintTop_toBottomOf="@+id/lblSortBy"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <RadioButton
+            android:id="@+id/btnFilterAZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="A-Z"
+            app:layout_constraintTop_toBottomOf="@+id/lblSortBy"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <RadioButton
+            android:id="@+id/btnFilterZA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Z-A"
+            app:layout_constraintTop_toBottomOf="@+id/lblSortBy"
+            tools:layout_editor_absoluteX="0dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lblSortBy2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Order by"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/btnFilterSearch"
+        app:layout_constraintTop_toBottomOf="@+id/lblFilterPlatform" />
+
+    <Button
+        android:id="@+id/btnFilterCancel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FF0000"
+        android:onClick="onCancel_Clicked"
+        android:text="Cancel"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnFilterSearch"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnFilterSearch"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF0000"
+        android:onClick="onSearch_Clicked"
+        android:text="Search"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnFilterCancel"
+        app:layout_constraintTop_toTopOf="@+id/btnFilterCancel" />
+
+    <TextView
+        android:id="@+id/lblSortBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Sort by"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/lblFilterPlatform"
+        app:layout_constraintTop_toBottomOf="@+id/lblFilterPlatform" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imgbtnTikTok2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:background="#FF0000"
+                android:onClick="onTikTok_Clicked"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tiktok"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgbtnInstagram" />
+
+            <ImageButton
+                android:id="@+id/imgbtnSnapchat2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:background="#3F51B5"
+                android:backgroundTint="#FFFFFF"
+                android:onClick="onSnapchat_Clicked"
+                android:scaleType="fitCenter"
+                android:src="@drawable/snapchat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgbtnTwitter" />
+
+            <ImageButton
+                android:id="@+id/imgbtnFacebook2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:background="#3F51B5"
+                android:backgroundTint="#FFFFFF"
+                android:onClick="onFacebook_Clicked"
+                android:scaleType="fitCenter"
+                android:src="@drawable/facebook"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imgbtnInstagram2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:background="#FF0000"
+                android:onClick="onInstagram_Clicked"
+                android:scaleType="fitCenter"
+                android:src="@drawable/instagram"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgbtnYouTube" />
+
+            <ImageButton
+                android:id="@+id/imgbtnYouTube2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="#FF0000"
+                android:onClick="onYouTube_Clicked"
+                android:scaleType="fitCenter"
+                android:src="@drawable/youtube"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imgbtnTwitter2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:background="#3F51B5"
+                android:backgroundTint="#FFFFFF"
+                android:onClick="onTwitter_Clicked"
+                android:scaleType="fitCenter"
+                android:src="@drawable/twitter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgbtnFacebook" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/lblFilterPlatform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Platform: All"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/btnFilterCancel"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/lblSortBy"
+        app:layout_constraintTop_toBottomOf="@+id/lblSortBy">
+
+        <RadioButton
+            android:id="@+id/btnFilterViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:checked="false"
+            android:text="Views" />
+
+        <RadioButton
+            android:id="@+id/btnFilterUploadTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:checked="true"
+            android:text="Uploaded" />
+
+        <RadioButton
+            android:id="@+id/btnFilterPopularity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Popularity" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/ckboxPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pinned"
+        app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/btnFilterCancel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
